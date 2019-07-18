@@ -11,6 +11,6 @@ function disableTextArea(currentTime) {
   console.log(currentTime);
 }
 
-function remindUserOfTime() {
-
+function remindUserOfTime(seconds) {
+  console.log('this many ' + seconds + ' has passed');
 }

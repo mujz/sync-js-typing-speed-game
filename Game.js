@@ -11,7 +11,13 @@ class Game {
   }
 
   every(time, callback) {
-    setInterval(callback, time);
+    let timeElapsed = { seconds: 0 };
+    setInterval(this.incrementTime, time, time, timeElapsed, callback);
+  }
+
+  incrementTime(time, timeElapsed, callback) {
+    timeElapsed.seconds += time / 1000;
+    callback(timeElapsed.seconds);
   }
 
   endGame() {
